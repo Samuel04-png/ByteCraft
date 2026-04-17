@@ -11,11 +11,13 @@
   <meta property="og:description" content="Zambia's trusted physical security installation specialists. CCTV, gates, alarms, access control.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bytecraft.byteandberry.com">
+  <meta name="theme-color" content="#F7F8FB">
 
+  <link rel="icon" type="image/svg+xml" href="bytecraft_logo/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="bytecraft_logo/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="bytecraft_logo/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="bytecraft_logo/favicon_io/favicon-16x16.png">
-  <link rel="shortcut icon" href="bytecraft_logo/favicon_io/favicon.ico">
+  <link rel="shortcut icon" href="bytecraft_logo/favicon_io/favicon-32x32.png">
   <link rel="manifest" href="bytecraft_logo/favicon_io/site.webmanifest">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -196,17 +198,25 @@
     .btn-icon svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
 
     .brand-lockup {
-      display: block;
-      width: 188px;
-      height: 38px;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 220%;
-      background-image: url("bytecraft_logo/logo_text.png");
+      display: inline-flex;
+      align-items: center;
+      width: clamp(184px, 19vw, 246px);
       flex-shrink: 0;
     }
-    .brand-lockup-dark {
-      background-image: url("bytecraft_logo/logotext_dark.png");
+    .brand-lockup img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    .brand-wordmark-dark {
+      display: none;
+    }
+    .brand-lockup-dark .brand-wordmark-light {
+      display: none;
+    }
+    .brand-lockup-dark .brand-wordmark-dark {
+      display: block;
     }
     .brand-mark {
       display: block;
@@ -310,8 +320,11 @@
       border-color: var(--border-subtle);
       color: var(--text-primary);
     }
-    body.light-mode .site-nav.scrolled .brand-lockup {
-      background-image: url("bytecraft_logo/logotext_dark.png");
+    body.light-mode .site-nav.scrolled .brand-lockup:not(.brand-lockup-dark) .brand-wordmark-light {
+      display: none;
+    }
+    body.light-mode .site-nav.scrolled .brand-lockup:not(.brand-lockup-dark) .brand-wordmark-dark {
+      display: block;
     }
     .theme-toggle-thumb {
       position: absolute;
@@ -1466,7 +1479,7 @@
 
     @media (max-width: 767px) {
       .site-nav .brand-lockup {
-        width: 158px;
+        width: 170px;
       }
       .stats-grid .stat-item:nth-child(1),
       .stats-grid .stat-item:nth-child(2) {
@@ -1505,7 +1518,7 @@
     }
   </style>
 </head>
-<body>
+<body class="light-mode">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
@@ -1514,7 +1527,10 @@
         <div class="visually-hidden">Mobile menu</div>
         <button class="mobile-close" id="mobile-close" aria-label="Close menu"></button>
       </div>
-      <a href="#home" class="brand-lockup mobile-brand" data-scroll-link aria-label="Bytecraft Technology home"></a>
+      <a href="#home" class="brand-lockup mobile-brand" data-scroll-link aria-label="Bytecraft Technology home">
+        <img class="brand-wordmark brand-wordmark-light" src="bytecraft_logo/logotext_dark.png" alt="Bytecraft Technology">
+        <img class="brand-wordmark brand-wordmark-dark" src="bytecraft_logo/logo_text.png" alt="">
+      </a>
       <div class="mobile-menu-links">
         <a class="mobile-menu-link" href="#home" data-nav-link data-scroll-link>Home</a>
         <a class="mobile-menu-link" href="#services" data-nav-link data-scroll-link>Services</a>
@@ -1544,7 +1560,10 @@
 
   <nav class="site-nav" id="site-nav">
     <div class="container nav-inner">
-      <a href="#home" class="brand-lockup" data-scroll-link aria-label="Bytecraft Technology home"></a>
+      <a href="#home" class="brand-lockup" data-scroll-link aria-label="Bytecraft Technology home">
+        <img class="brand-wordmark brand-wordmark-light" src="bytecraft_logo/logotext_dark.png" alt="Bytecraft Technology">
+        <img class="brand-wordmark brand-wordmark-dark" src="bytecraft_logo/logo_text.png" alt="">
+      </a>
 
       <div class="nav-center" aria-label="Primary navigation">
         <a class="nav-link active" href="#home" data-nav-link data-scroll-link>Home</a>
@@ -1899,7 +1918,10 @@
 
     <section class="section packages-section" id="packages" data-nav-section>
       <div class="container">
-        <span class="brand-lockup brand-lockup-dark packages-brand" aria-hidden="true"></span>
+        <span class="brand-lockup brand-lockup-dark packages-brand" aria-hidden="true">
+          <img class="brand-wordmark brand-wordmark-light" src="bytecraft_logo/logotext_dark.png" alt="">
+          <img class="brand-wordmark brand-wordmark-dark" src="bytecraft_logo/logo_text.png" alt="">
+        </span>
 
         <div class="section-head" data-aos="fade-up">
           <div>
@@ -2131,7 +2153,7 @@
       <div class="footer-divider"></div>
 
       <div class="footer-bottom">
-        <div>© 2025 Bytecraft Technology. All rights reserved.</div>
+        <div>&copy; 2025 Bytecraft Technology. All rights reserved.</div>
         <div><a href="https://byteandberry.com" target="_blank" rel="noreferrer">A sister company of Byte &amp; Berry</a></div>
         <div>bytecraft.byteandberry.com</div>
       </div>
@@ -2163,16 +2185,6 @@
         src: "images/Best CCTV Installation Services in Nigeria.jfif",
         alt: "Technician mounting an interior dome security camera",
         label: "Interior CCTV Setup"
-      },
-      {
-        src: "images/Cctv camera in smart city ai generated _ Premium AI-generated image.jfif",
-        alt: "Urban dome surveillance camera overlooking a city street",
-        label: "Urban Surveillance Systems"
-      },
-      {
-        src: "images/cctv installation.jfif",
-        alt: "Large PTZ camera used as a surveillance visual",
-        label: "PTZ Coverage Design"
       },
       {
         src: "images/CCTV Installations in Stoke on Trent _ Home CCTV Systems in Staffordshire.jfif",
@@ -2252,6 +2264,11 @@
 
     function setTheme(mode) {
       document.body.classList.toggle("light-mode", mode === "light");
+      document.documentElement.style.colorScheme = mode;
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", mode === "light" ? "#F7F8FB" : "#0D0F14");
+      themeToggles.forEach(function(toggle) {
+        toggle.setAttribute("aria-label", mode === "light" ? "Switch to dark mode" : "Switch to light mode");
+      });
       localStorage.setItem("bytecraft-theme", mode);
     }
 
@@ -2474,9 +2491,7 @@
     updateNavState();
 
     const storedTheme = localStorage.getItem("bytecraft-theme");
-    if (storedTheme === "light" || storedTheme === "dark") {
-      setTheme(storedTheme);
-    }
+    setTheme(storedTheme === "dark" ? "dark" : "light");
 
     AOS.init({ duration: 700, once: true, offset: 60 });
   </script>
