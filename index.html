@@ -198,25 +198,35 @@
     .btn-icon svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
 
     .brand-lockup {
-      display: inline-flex;
-      align-items: center;
-      width: clamp(184px, 19vw, 246px);
+      display: grid;
+      place-items: center;
+      width: clamp(176px, 16vw, 212px);
+      line-height: 0;
       flex-shrink: 0;
     }
     .brand-lockup img {
+      grid-area: 1 / 1;
       display: block;
       width: 100%;
       height: auto;
       object-fit: contain;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+    .brand-wordmark-light {
+      opacity: 1;
+      visibility: visible;
     }
     .brand-wordmark-dark {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
     }
     .brand-lockup-dark .brand-wordmark-light {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
     }
     .brand-lockup-dark .brand-wordmark-dark {
-      display: block;
+      opacity: 1;
+      visibility: visible;
     }
     .brand-mark {
       display: block;
@@ -249,9 +259,9 @@
     .nav-center {
       display: none;
       align-items: center;
-      gap: 22px;
-      margin-left: auto;
-      margin-right: auto;
+      justify-content: center;
+      gap: 20px;
+      min-width: 0;
     }
     .nav-link {
       position: relative;
@@ -285,7 +295,9 @@
     .nav-actions {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       gap: 12px;
+      flex-shrink: 0;
     }
     .nav-phone {
       display: none;
@@ -321,10 +333,12 @@
       color: var(--text-primary);
     }
     body.light-mode .site-nav.scrolled .brand-lockup:not(.brand-lockup-dark) .brand-wordmark-light {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
     }
     body.light-mode .site-nav.scrolled .brand-lockup:not(.brand-lockup-dark) .brand-wordmark-dark {
-      display: block;
+      opacity: 1;
+      visibility: visible;
     }
     .theme-toggle-thumb {
       position: absolute;
@@ -1439,8 +1453,17 @@
     }
 
     @media (min-width: 1100px) {
+      .nav-inner {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 28px;
+      }
       .nav-phone {
         display: inline-flex;
+        padding-right: 14px;
+        margin-right: 2px;
+        border-right: 1px solid var(--border-subtle);
       }
       .nav-quote {
         display: inline-flex;
@@ -1479,7 +1502,7 @@
 
     @media (max-width: 767px) {
       .site-nav .brand-lockup {
-        width: 170px;
+        width: 160px;
       }
       .stats-grid .stat-item:nth-child(1),
       .stats-grid .stat-item:nth-child(2) {
