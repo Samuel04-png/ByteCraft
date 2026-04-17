@@ -248,10 +248,21 @@
       left: 0;
       right: 0;
       width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
       margin-top: 0;
       padding-top: 0;
       z-index: 1000;
       transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .site-nav .brand-lockup {
+      height: 34px;
+      overflow: hidden;
+      align-self: center;
+    }
+    .site-nav .brand-lockup img {
+      transform: translateY(-45%);
     }
     .site-nav.scrolled {
       background: var(--nav-solid);
@@ -261,12 +272,17 @@
     }
     .nav-inner {
       min-height: var(--nav-height);
+      height: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 18px;
       margin-top: 0;
       padding-top: 0;
+    }
+    #main-content {
+      margin: 0;
+      padding: 0;
     }
     .nav-center {
       display: none;
@@ -1057,7 +1073,8 @@
       text-transform: uppercase;
       margin-bottom: 10px;
     }
-    .package-price {
+    .package-price,
+    .package-step {
       font-family: var(--font-display);
       font-size: 44px;
       font-weight: 800;
@@ -1065,7 +1082,8 @@
       color: #10151F;
       margin-bottom: 8px;
     }
-    .package-card.featured .package-price {
+    .package-card.featured .package-price,
+    .package-card.featured .package-step {
       color: var(--amber);
     }
     .package-note {
@@ -1572,7 +1590,7 @@
         <a class="mobile-menu-link" href="#home" data-nav-link data-scroll-link>Home</a>
         <a class="mobile-menu-link" href="#services" data-nav-link data-scroll-link>Services</a>
         <a class="mobile-menu-link" href="#about" data-nav-link data-scroll-link>Why Us</a>
-        <a class="mobile-menu-link" href="#packages" data-nav-link data-scroll-link>Packages</a>
+        <a class="mobile-menu-link" href="#process" data-nav-link data-scroll-link>Process</a>
         <a class="mobile-menu-link" href="#projects" data-nav-link data-scroll-link>Projects</a>
         <a class="mobile-menu-link" href="#contact" data-nav-link data-scroll-link>Contact</a>
       </div>
@@ -1606,7 +1624,7 @@
         <a class="nav-link active" href="#home" data-nav-link data-scroll-link>Home</a>
         <a class="nav-link" href="#services" data-nav-link data-scroll-link>Services</a>
         <a class="nav-link" href="#about" data-nav-link data-scroll-link>Why Us</a>
-        <a class="nav-link" href="#packages" data-nav-link data-scroll-link>Packages</a>
+        <a class="nav-link" href="#process" data-nav-link data-scroll-link>Process</a>
         <a class="nav-link" href="#projects" data-nav-link data-scroll-link>Projects</a>
         <a class="nav-link" href="#contact" data-nav-link data-scroll-link>Contact</a>
       </div>
@@ -1953,7 +1971,7 @@
       </div>
     </section>
 
-    <section class="section packages-section" id="packages" data-nav-section>
+    <section class="section packages-section" id="process" data-nav-section>
       <div class="container">
         <span class="brand-lockup brand-lockup-dark packages-brand" aria-hidden="true">
           <img class="brand-wordmark brand-wordmark-light" src="bytecraft_logo/logotext_dark.png" alt="">
@@ -1962,73 +1980,63 @@
 
         <div class="section-head" data-aos="fade-up">
           <div>
-            <div class="section-label">Packages &amp; Pricing</div>
-            <h2 class="section-title">Packages &amp; Pricing</h2>
+            <div class="section-label">How It Works</div>
+            <h2 class="section-title">Free Assessment Process</h2>
           </div>
-          <p class="section-subtitle">Transparent pricing - no hidden fees. All packages include free site assessment.</p>
+          <p class="section-subtitle">Every system is quoted after a site assessment so the recommendation matches your property, security goals, and installation scope.</p>
         </div>
 
         <div class="packages-grid">
           <article class="package-card" data-aos="fade-up">
-            <span class="package-tag">Residential</span>
-            <h3 class="package-name">Starter Package</h3>
-            <div class="package-price">K3,500+</div>
-            <p class="package-note">4 cameras + DVR + gate motor</p>
+            <span class="package-tag">Step 1</span>
+            <h3 class="package-name">Free Site Assessment</h3>
+            <div class="package-step">Visit &amp; Inspect</div>
+            <p class="package-note">We assess your property layout, entry points, blind spots, power availability, and the type of protection you need.</p>
             <div class="package-divider"></div>
             <ul class="package-features">
-              <li>4-camera CCTV system</li>
-              <li>DVR recorder + 1TB storage</li>
-              <li>1 electric gate motor + remote</li>
-              <li>Mobile remote viewing</li>
-              <li>Free site assessment</li>
-              <li>6-month warranty</li>
+              <li>On-site visit for homes, shops, offices, and compounds</li>
+              <li>Review of access points, perimeter, and high-risk areas</li>
+              <li>Checks for cabling routes, power, and internet readiness</li>
+              <li>Clear discussion of your priorities and budget range</li>
             </ul>
-            <a class="btn-outline btn-full package-cta" href="https://wa.me/260760580949" data-package="Starter Package">Get This Package</a>
+            <a class="btn-outline btn-full" href="https://wa.me/260760580949?text=Hi+Bytecraft!+I'd+like+to+book+a+free+site+assessment." target="_blank" rel="noreferrer">Book Free Assessment</a>
           </article>
 
           <article class="package-card featured" data-aos="fade-up" data-aos-delay="100">
-            <span class="package-badge">Most Popular</span>
-            <span class="package-tag">Residential / SME</span>
-            <h3 class="package-name">Home Pro Package</h3>
-            <div class="package-price">K9,500+</div>
-            <p class="package-note">8 cameras + NVR + gate + alarm</p>
+            <span class="package-badge">Recommended</span>
+            <span class="package-tag">Step 2</span>
+            <h3 class="package-name">Custom System Design</h3>
+            <div class="package-step">Scope &amp; Quote</div>
+            <p class="package-note">After the assessment, we prepare a solution tailored to your property instead of using fixed package pricing.</p>
             <div class="package-divider"></div>
             <ul class="package-features">
-              <li>8-camera HD CCTV system</li>
-              <li>NVR recorder + 2TB storage</li>
-              <li>Intruder alarm system</li>
-              <li>Gate motor + 3 remotes</li>
-              <li>GSM mobile alerts</li>
-              <li>Mobile remote viewing</li>
-              <li>Free site assessment</li>
-              <li>12-month warranty</li>
-              <li>Free annual service visit</li>
+              <li>Right-sized recommendations for CCTV, gates, alarms, and access control</li>
+              <li>Written quotation based on the actual work required</li>
+              <li>Equipment options explained clearly before you commit</li>
+              <li>Project timeline, warranty, and support details included</li>
             </ul>
-            <a class="btn-primary btn-full package-cta" href="https://wa.me/260760580949" data-package="Home Pro Package">Get This Package</a>
+            <a class="btn-primary btn-full" href="https://wa.me/260760580949?text=Hi+Bytecraft!+I'd+like+a+custom+security+quote+after+a+site+assessment." target="_blank" rel="noreferrer">Request Custom Quote</a>
           </article>
 
           <article class="package-card" data-aos="fade-up" data-aos-delay="200">
-            <span class="package-tag">Commercial</span>
-            <h3 class="package-name">Business Package</h3>
-            <div class="package-price">K18,000+</div>
-            <p class="package-note">Full perimeter + access control</p>
+            <span class="package-tag">Step 3</span>
+            <h3 class="package-name">Installation &amp; Handover</h3>
+            <div class="package-step">Install &amp; Support</div>
+            <p class="package-note">Once approved, we install the system neatly, test everything, and show you how to use it with confidence.</p>
             <div class="package-divider"></div>
             <ul class="package-features">
-              <li>16+ camera commercial CCTV</li>
-              <li>Biometric access control</li>
-              <li>Electric fence + alarm</li>
-              <li>Staff time &amp; attendance</li>
-              <li>Boom barrier option</li>
-              <li>Priority 24/7 support</li>
-              <li>Custom SLA agreement</li>
+              <li>Professional installation with neat cable management</li>
+              <li>System testing, setup, and user handover</li>
+              <li>Mobile viewing, remotes, and access permissions configured</li>
+              <li>After-installation support when you need adjustments or help</li>
             </ul>
-            <a class="btn-outline btn-full package-cta" href="https://wa.me/260760580949" data-package="Business Package">Get This Package</a>
+            <a class="btn-outline btn-full" href="https://wa.me/260760580949?text=Hi+Bytecraft!+I'd+like+to+plan+an+installation+for+my+property." target="_blank" rel="noreferrer">Plan Your Installation</a>
           </article>
         </div>
 
         <div class="enterprise-bar" data-aos="fade-up">
-          <p>Enterprise &amp; government projects are scoped individually - contact us for a custom quotation.</p>
-          <a class="btn-primary" href="https://wa.me/260760580949?text=Hi+Bytecraft!+I'd+like+a+custom+quotation+for+an+enterprise+or+government+project." target="_blank" rel="noreferrer">WhatsApp Us</a>
+          <p>There is no one-size-fits-all price list. Homes, offices, retail spaces, schools, and multi-site projects are quoted individually after assessment.</p>
+          <a class="btn-primary" href="https://wa.me/260760580949?text=Hi+Bytecraft!+I'd+like+a+custom+quotation+for+my+property." target="_blank" rel="noreferrer">Request a Quote</a>
         </div>
       </div>
     </section>
@@ -2263,6 +2271,11 @@
     const sections = Array.from(document.querySelectorAll("[data-nav-section]"));
     const themeToggles = [document.getElementById("theme-toggle"), document.getElementById("theme-toggle-mobile")].filter(Boolean);
 
+    function syncNavHeight() {
+      if (!nav) return;
+      document.documentElement.style.setProperty("--nav-height", nav.offsetHeight + "px");
+    }
+
     function smoothScrollTo(targetSelector) {
       const target = document.querySelector(targetSelector);
       if (!target) return;
@@ -2462,17 +2475,6 @@
       window.addEventListener("scroll", updateParallax, { passive: true });
     }
 
-    function initPackageLinks() {
-      document.querySelectorAll(".package-cta").forEach(function(link) {
-        link.addEventListener("click", function(event) {
-          event.preventDefault();
-          const packageName = link.dataset.package || "package";
-          const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent("Hi Bytecraft! I'm interested in the " + packageName + " package.");
-          window.open(url, "_blank", "noopener");
-        });
-      });
-    }
-
     document.querySelectorAll("[data-scroll-link]").forEach(function(link) {
       link.addEventListener("click", function(event) {
         const href = link.getAttribute("href");
@@ -2519,12 +2521,13 @@
     });
 
     window.addEventListener("scroll", updateNavState, { passive: true });
+    window.addEventListener("resize", syncNavHeight);
 
+    syncNavHeight();
     initGallery();
     initActiveLinks();
     initCounters();
     initHeroParallax();
-    initPackageLinks();
     updateNavState();
 
     const storedTheme = localStorage.getItem("bytecraft-theme");
