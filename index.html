@@ -11,13 +11,13 @@
   <meta property="og:description" content="Zambia's trusted physical security installation specialists. CCTV, gates, alarms, access control.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bytecraft.byteandberry.com">
-  <meta name="theme-color" content="#F7F8FB">
+  <meta name="theme-color" content="#0A173A">
 
-  <link rel="icon" type="image/svg+xml" href="bytecraft_logo/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="bytecraft_logo/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="bytecraft_logo/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="bytecraft_logo/favicon_io/favicon-16x16.png">
-  <link rel="shortcut icon" href="bytecraft_logo/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="bytecraft_logo/favicon_io/favicon.ico">
+  <link rel="shortcut icon" href="bytecraft_logo/favicon_io/favicon.ico">
   <link rel="manifest" href="bytecraft_logo/favicon_io/site.webmanifest">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,27 +27,27 @@
 
   <style>
     :root {
-      --amber: #BA7517;
-      --amber-light: #EF9F27;
-      --amber-glow: rgba(186, 117, 23, 0.15);
-      --dark-bg: #0D0F14;
-      --dark-card: #141820;
-      --dark-surface: #1C2230;
-      --dark-border: rgba(255,255,255,0.08);
-      --dark-border-hover: rgba(186,117,23,0.5);
+      --amber: #0047FF;
+      --amber-light: #3F7CFF;
+      --amber-glow: rgba(0, 71, 255, 0.16);
+      --dark-bg: #060B1D;
+      --dark-card: #0D1731;
+      --dark-surface: #101D3E;
+      --dark-border: rgba(143, 171, 255, 0.18);
+      --dark-border-hover: rgba(0,71,255,0.55);
       --white: #FFFFFF;
-      --off-white: #E8EAF0;
-      --text-muted: #8A91A0;
-      --light-bg: #F2F3F7;
+      --off-white: #E6ECFF;
+      --text-muted: #9AA8CA;
+      --light-bg: #EAF1FF;
       --light-card: #FFFFFF;
-      --light-border: #DDE0E8;
+      --light-border: #C8D8FF;
       --font-display: 'Barlow Condensed', sans-serif;
       --font-body: 'DM Sans', sans-serif;
       --radius-sm: 4px;
       --radius-md: 8px;
       --radius-lg: 12px;
       --transition: all 0.25s ease;
-      --shadow-amber: 0 4px 24px rgba(186,117,23,0.2);
+      --shadow-amber: 0 10px 32px rgba(0,71,255,0.22);
       --page-bg: var(--dark-bg);
       --surface-primary: var(--dark-bg);
       --surface-secondary: var(--dark-surface);
@@ -56,9 +56,9 @@
       --text-primary: var(--white);
       --text-body: var(--off-white);
       --text-soft: var(--text-muted);
-      --nav-solid: rgba(13,15,20,0.94);
-      --nav-shadow: 0 2px 20px rgba(0,0,0,0.4);
-      --footer-bg: #080A0E;
+      --nav-solid: rgba(8,15,42,0.94);
+      --nav-shadow: 0 12px 36px rgba(1,7,24,0.55);
+      --footer-bg: #040916;
       --footer-primary: var(--off-white);
       --footer-soft: var(--text-muted);
       --form-bg: rgba(255,255,255,0.05);
@@ -97,23 +97,23 @@
     }
 
     body.light-mode {
-      --page-bg: #F7F8FB;
+      --page-bg: #F5F8FF;
       --surface-primary: #FFFFFF;
-      --surface-secondary: #EEF1F5;
+      --surface-secondary: #EAF1FF;
       --surface-card: #FFFFFF;
-      --border-subtle: rgba(16,21,31,0.10);
-      --text-primary: #111722;
-      --text-body: #202733;
-      --text-soft: #616977;
-      --nav-solid: rgba(255,255,255,0.95);
-      --nav-shadow: 0 2px 24px rgba(15,20,30,0.08);
-      --footer-bg: #E5E9F0;
-      --footer-primary: #10151F;
-      --footer-soft: #5C6472;
-      --form-bg: #F7F8FB;
-      --form-text: #10151F;
-      --form-border: rgba(16,21,31,0.10);
-      --form-placeholder: #7A818F;
+      --border-subtle: rgba(10,23,58,0.10);
+      --text-primary: #091733;
+      --text-body: #1E2B4C;
+      --text-soft: #647396;
+      --nav-solid: rgba(255,255,255,0.92);
+      --nav-shadow: 0 10px 32px rgba(6,18,52,0.12);
+      --footer-bg: #DDE8FF;
+      --footer-primary: #091733;
+      --footer-soft: #546587;
+      --form-bg: #F5F8FF;
+      --form-text: #091733;
+      --form-border: rgba(10,23,58,0.12);
+      --form-placeholder: #7282A4;
     }
 
     .skip-link {
@@ -205,41 +205,26 @@
     .btn-icon svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
 
     .brand-lockup {
-      display: grid;
-      place-items: center;
-      width: clamp(176px, 16vw, 212px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       line-height: 0;
       flex-shrink: 0;
     }
     .brand-lockup img {
-      grid-area: 1 / 1;
       display: block;
       width: 100%;
       height: auto;
       object-fit: contain;
-      transition: opacity 0.2s ease, visibility 0.2s ease;
     }
-    .brand-wordmark-light {
-      opacity: 1;
-      visibility: visible;
-    }
-    .brand-wordmark-dark {
-      opacity: 0;
-      visibility: hidden;
-    }
-    .brand-lockup-dark .brand-wordmark-light {
-      opacity: 0;
-      visibility: hidden;
-    }
-    .brand-lockup-dark .brand-wordmark-dark {
-      opacity: 1;
-      visibility: visible;
+    .brand-mark-lockup {
+      width: clamp(52px, 5vw, 64px);
     }
     .brand-mark {
       display: block;
-      width: 46px;
-      height: 46px;
-      background: url("bytecraft_logo/logo2.png") center center / 260% no-repeat;
+      width: min(100%, 280px);
+      height: auto;
+      object-fit: contain;
     }
 
     .site-nav {
@@ -254,18 +239,14 @@
       margin-top: 0;
       padding-top: 0;
       z-index: 1000;
+      background: linear-gradient(180deg, rgba(6,11,29,0.86) 0%, rgba(6,11,29,0.18) 100%);
+      border-bottom: 1px solid transparent;
+      backdrop-filter: blur(12px);
       transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
     .site-nav .brand-lockup {
-      height: 34px;
-      overflow: hidden;
+      width: clamp(52px, 5vw, 64px);
       align-self: center;
-    }
-    .site-nav .brand-wordmark-light {
-      transform: translateY(-44%);
-    }
-    .site-nav .brand-wordmark-dark {
-      transform: translateY(-41%);
     }
     .site-nav.scrolled {
       background: var(--nav-solid);
@@ -349,7 +330,7 @@
       height: 34px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(13,15,20,0.28);
+      background: rgba(255,255,255,0.06);
       display: inline-flex;
       align-items: center;
       justify-content: space-between;
@@ -359,17 +340,9 @@
       overflow: hidden;
     }
     .site-nav.scrolled .theme-toggle {
-      background: rgba(255,255,255,0.03);
+      background: rgba(255,255,255,0.04);
       border-color: var(--border-subtle);
       color: var(--text-primary);
-    }
-    body.light-mode .site-nav.scrolled .brand-lockup:not(.brand-lockup-dark) .brand-wordmark-light {
-      opacity: 0;
-      visibility: hidden;
-    }
-    body.light-mode .site-nav.scrolled .brand-lockup:not(.brand-lockup-dark) .brand-wordmark-dark {
-      opacity: 1;
-      visibility: visible;
     }
     .theme-toggle-thumb {
       position: absolute;
@@ -379,7 +352,7 @@
       height: 24px;
       border-radius: 50%;
       background: var(--amber);
-      box-shadow: 0 4px 14px rgba(186,117,23,0.25);
+      box-shadow: 0 4px 14px rgba(0,71,255,0.28);
       transition: transform 0.25s ease;
     }
     body.light-mode .theme-toggle-thumb {
@@ -474,8 +447,7 @@
     .mobile-close::after { transform: translate(-50%, -50%) rotate(-45deg); }
     .mobile-brand {
       margin: 12px auto 0;
-      width: 220px;
-      height: 44px;
+      width: 96px;
     }
     .mobile-menu-links {
       display: flex;
@@ -521,15 +493,25 @@
       min-height: 100svh;
       position: relative;
       overflow: hidden;
-      background: url("images/download.jfif") center center / cover no-repeat;
+      background: var(--dark-bg);
       margin-top: 0;
       padding-top: var(--nav-height);
+    }
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: scale(1.08);
     }
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(13,15,20,0.90) 0%, rgba(13,15,20,0.60) 100%);
+      z-index: 0;
+      background: linear-gradient(125deg, rgba(6,11,29,0.94) 0%, rgba(10,23,58,0.78) 55%, rgba(0,71,255,0.38) 100%);
     }
     .hero::after {
       content: "";
@@ -539,7 +521,8 @@
       width: 400px;
       height: 400px;
       border-radius: 50%;
-      background: rgba(186,117,23,0.07);
+      z-index: 0;
+      background: rgba(0,71,255,0.18);
       filter: blur(80px);
       animation: amber-pulse 9s ease-in-out infinite;
     }
@@ -556,14 +539,19 @@
     .hero-copy {
       max-width: 680px;
     }
+    .hero-logo {
+      width: min(100%, 340px);
+      margin-bottom: 22px;
+      filter: drop-shadow(0 18px 38px rgba(2,9,30,0.45));
+    }
     .location-chip {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 6px 14px;
       border-radius: 20px;
-      border: 1px solid rgba(186,117,23,0.3);
-      background: rgba(186,117,23,0.12);
+      border: 1px solid rgba(0,71,255,0.32);
+      background: rgba(0,71,255,0.13);
       font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.1em;
@@ -576,7 +564,7 @@
       height: 8px;
       border-radius: 50%;
       background: var(--amber);
-      box-shadow: 0 0 0 6px rgba(186,117,23,0.12);
+      box-shadow: 0 0 0 6px rgba(0,71,255,0.12);
     }
     .hero-title-wrap {
       position: relative;
@@ -635,7 +623,7 @@
     }
 
     .hero-form-card {
-      background: rgba(20, 24, 32, 0.85);
+      background: rgba(7, 17, 42, 0.82);
       backdrop-filter: blur(12px);
       border: 1px solid var(--dark-border);
       border-top: 3px solid var(--amber);
@@ -727,11 +715,11 @@
     .form-control:focus {
       border-color: var(--amber);
       outline: none;
-      background: rgba(186,117,23,0.05);
+      background: rgba(0,71,255,0.05);
     }
     .form-control.is-invalid {
       border-color: var(--amber);
-      box-shadow: 0 0 0 1px rgba(186,117,23,0.3);
+      box-shadow: 0 0 0 1px rgba(0,71,255,0.3);
       animation: field-shake 0.35s ease;
     }
     textarea.form-control {
@@ -756,7 +744,7 @@
     }
 
     .stats-bar {
-      background: var(--amber);
+      background: linear-gradient(90deg, #0E245B 0%, #0047FF 100%);
       padding: 48px 0;
     }
     .stats-grid {
@@ -774,12 +762,12 @@
       font-size: clamp(42px, 6vw, 64px);
       font-weight: 800;
       line-height: 1;
-      color: var(--dark-bg);
+      color: var(--white);
       gap: 2px;
     }
     .stat-suffix {
       font-size: 0.72em;
-      color: rgba(13,15,20,0.85);
+      color: rgba(230,236,255,0.88);
     }
     .stat-label {
       margin-top: 8px;
@@ -787,7 +775,7 @@
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: rgba(13,15,20,0.75);
+      color: rgba(230,236,255,0.76);
     }
 
     .services-section { background: var(--surface-primary); }
@@ -884,9 +872,10 @@
     .client-card-media {
       position: absolute;
       inset: 0;
-      background-image: var(--card-image);
-      background-size: cover;
-      background-position: center;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
       transition: transform 0.5s ease;
     }
     .client-card::before {
@@ -911,8 +900,8 @@
       display: inline-flex;
       padding: 3px 10px;
       border-radius: 20px;
-      background: rgba(186,117,23,0.9);
-      color: var(--dark-bg);
+      background: rgba(0,71,255,0.9);
+      color: var(--white);
       font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.1em;
@@ -1027,10 +1016,9 @@
       color: #555;
     }
     .packages-brand {
-      margin-bottom: 18px;
-      width: 210px;
-      height: 44px;
-      background-size: 215%;
+      width: clamp(220px, 24vw, 300px);
+      margin-bottom: 26px;
+      align-self: flex-start;
     }
     .packages-grid {
       display: grid;
@@ -1070,7 +1058,7 @@
       display: inline-flex;
       padding: 3px 12px;
       border-radius: 20px;
-      background: rgba(186,117,23,0.12);
+      background: rgba(0,71,255,0.12);
       color: var(--amber);
       font-size: 11px;
       font-weight: 500;
@@ -1079,7 +1067,7 @@
       margin-bottom: 16px;
     }
     .package-card.featured .package-tag {
-      background: rgba(186,117,23,0.18);
+      background: rgba(0,71,255,0.18);
       color: var(--amber-light);
     }
     .package-name {
@@ -1181,7 +1169,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(186,117,23,0.85) 0%, transparent 60%);
+      background: linear-gradient(to top, rgba(0,71,255,0.88) 0%, transparent 60%);
       opacity: 0;
       transition: opacity 0.4s ease;
     }
@@ -1315,7 +1303,7 @@
     }
     .social-row a:hover {
       color: var(--amber);
-      border-color: rgba(186,117,23,0.4);
+      border-color: rgba(0,71,255,0.4);
       transform: translateY(-1px);
     }
     .social-row svg {
@@ -1551,32 +1539,22 @@
 
     @media (max-width: 767px) {
       .site-nav {
-        background: rgba(13,15,20,0.72);
+        background: rgba(6,11,29,0.84);
         border-bottom: 1px solid transparent;
         backdrop-filter: blur(10px);
       }
       body.light-mode .site-nav {
-        background: rgba(255,255,255,0.9);
+        background: rgba(255,255,255,0.92);
       }
       .nav-inner {
         min-height: 70px;
         gap: 10px;
       }
       .site-nav .brand-lockup {
-        width: 160px;
-        height: 30px;
-      }
-      .site-nav .brand-wordmark-light {
-        transform: translateY(-42%);
-      }
-      .site-nav .brand-wordmark-dark {
-        transform: translateY(-39%);
+        width: 48px;
       }
       .site-nav.scrolled .nav-inner {
         min-height: 62px;
-      }
-      .site-nav.scrolled .brand-lockup {
-        height: 28px;
       }
       .nav-actions {
         gap: 8px;
@@ -1616,6 +1594,10 @@
         right: 14px;
         bottom: 14px;
       }
+      .packages-brand {
+        width: 220px;
+        margin-bottom: 20px;
+      }
     }
 
     @media (min-width: 768px) {
@@ -1634,7 +1616,7 @@
     }
   </style>
 </head>
-<body class="light-mode">
+<body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
@@ -1643,9 +1625,8 @@
         <div class="visually-hidden">Mobile menu</div>
         <button class="mobile-close" id="mobile-close" aria-label="Close menu"></button>
       </div>
-      <a href="#home" class="brand-lockup mobile-brand" data-scroll-link aria-label="Bytecraft Technology home">
-        <img class="brand-wordmark brand-wordmark-light" src="bytecraft_logo/logotext_dark.png" alt="Bytecraft Technology">
-        <img class="brand-wordmark brand-wordmark-dark" src="bytecraft_logo/logo_text.png" alt="">
+      <a href="#home" class="brand-lockup brand-mark-lockup mobile-brand" data-scroll-link aria-label="Bytecraft Technology home">
+        <img src="bytecraft_logo/logo.png" alt="Bytecraft Technology logo">
       </a>
       <div class="mobile-menu-links">
         <a class="mobile-menu-link" href="#home" data-nav-link data-scroll-link>Home</a>
@@ -1676,9 +1657,8 @@
 
   <nav class="site-nav" id="site-nav">
     <div class="container nav-inner">
-      <a href="#home" class="brand-lockup" data-scroll-link aria-label="Bytecraft Technology home">
-        <img class="brand-wordmark brand-wordmark-light" src="bytecraft_logo/logotext_dark.png" alt="Bytecraft Technology">
-        <img class="brand-wordmark brand-wordmark-dark" src="bytecraft_logo/logo_text.png" alt="">
+      <a href="#home" class="brand-lockup brand-mark-lockup" data-scroll-link aria-label="Bytecraft Technology home">
+        <img src="bytecraft_logo/logo.png" alt="Bytecraft Technology logo">
       </a>
 
       <div class="nav-center" aria-label="Primary navigation">
@@ -1715,8 +1695,10 @@
 
   <main id="main-content">
     <section class="hero" id="home" data-nav-section>
+      <img class="hero-background" src="images/download.jfif" alt="Bytecraft technician commissioning wall-mounted CCTV racks and a live monitor setup at a commercial site in Lusaka">
       <div class="container hero-shell">
         <div class="hero-copy" data-aos="fade-right">
+          <img class="hero-logo" src="bytecraft_logo/logo_words.png" alt="Bytecraft Technology logo">
           <div class="location-chip">
             <span class="dot" aria-hidden="true"></span>
             <span>Lusaka · Zambia</span>
@@ -1933,8 +1915,8 @@
         </div>
 
         <div class="client-grid">
-          <a class="client-card" href="#contact" data-scroll-link style="--card-image: url('images/Is Gate Automation A Good Investment For Your Home_.jfif');" data-aos="zoom-in">
-            <div class="client-card-media" aria-hidden="true"></div>
+          <a class="client-card" href="#contact" data-scroll-link data-aos="zoom-in">
+            <img class="client-card-media" src="images/site/perimeter-security-install.jpg" alt="Technicians installing perimeter security equipment on a boundary wall in Lusaka">
             <div class="client-card-content">
               <span class="client-chip">Residential</span>
               <h3 class="client-title">For Homeowners</h3>
@@ -1942,8 +1924,8 @@
             </div>
           </a>
 
-          <a class="client-card" href="#contact" data-scroll-link style="--card-image: url('images/download.jfif');" data-aos="zoom-in" data-aos-delay="100">
-            <div class="client-card-media" aria-hidden="true"></div>
+          <a class="client-card" href="#contact" data-scroll-link data-aos="zoom-in" data-aos-delay="100">
+            <img class="client-card-media" src="images/site/cctv-dome-camera.jpg" alt="Dome surveillance camera installed inside a commercial property in Lusaka">
             <div class="client-card-content">
               <span class="client-chip">Commercial</span>
               <h3 class="client-title">For Businesses</h3>
@@ -1951,8 +1933,8 @@
             </div>
           </a>
 
-          <a class="client-card" href="#contact" data-scroll-link style="--card-image: url('images/Enhance Security with Automatic Gate Installation by SF Bay Automatic Gates in San Rafael.jfif');" data-aos="zoom-in" data-aos-delay="200">
-            <div class="client-card-media" aria-hidden="true"></div>
+          <a class="client-card" href="#contact" data-scroll-link data-aos="zoom-in" data-aos-delay="200">
+            <img class="client-card-media" src="images/download (1).jfif" alt="Wall-mounted security rack with backup power and access control equipment during installation">
             <div class="client-card-content">
               <span class="client-chip">Industrial</span>
               <h3 class="client-title">For Industrial</h3>
@@ -1960,8 +1942,8 @@
             </div>
           </a>
 
-          <a class="client-card" href="#contact" data-scroll-link style="--card-image: url('images/download (1).jfif');" data-aos="zoom-in" data-aos-delay="300">
-            <div class="client-card-media" aria-hidden="true"></div>
+          <a class="client-card" href="#contact" data-scroll-link data-aos="zoom-in" data-aos-delay="300">
+            <img class="client-card-media" src="images/PHOTO-2026-04-20-21-19-56 2.jpg" alt="NVR monitor displaying multiple live CCTV camera feeds at a commercial property in Lusaka">
             <div class="client-card-content">
               <span class="client-chip">Enterprise</span>
               <h3 class="client-title">Government &amp; Corporate</h3>
@@ -1976,7 +1958,7 @@
       <div class="container about-grid">
         <div class="about-media-wrap" data-aos="fade-right">
           <div class="about-media-frame">
-            <img class="about-image" src="images/Best CCTV Installation Services in Nigeria.jfif" alt="Bytecraft technician installing a dome CCTV camera">
+            <img class="about-image" src="images/PHOTO-2026-04-20-21-13-50.jpg" alt="Bytecraft technician installing security equipment above an entrance in Lusaka">
           </div>
           <div class="about-badge">
             <strong>12 Months</strong>
@@ -2034,9 +2016,8 @@
 
     <section class="section packages-section" id="process" data-nav-section>
       <div class="container">
-        <span class="brand-lockup brand-lockup-dark packages-brand" aria-hidden="true">
-          <img class="brand-wordmark brand-wordmark-light" src="bytecraft_logo/logotext_dark.png" alt="">
-          <img class="brand-wordmark brand-wordmark-dark" src="bytecraft_logo/logo_text.png" alt="">
+        <span class="brand-lockup packages-brand" aria-hidden="true">
+          <img src="bytecraft_logo/logo_words.png" alt="">
         </span>
 
         <div class="section-head" data-aos="fade-up">
@@ -2218,7 +2199,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <span class="brand-mark" aria-hidden="true"></span>
+          <img class="brand-mark" src="bytecraft_logo/logo_words.png" alt="Bytecraft Technology logo">
           <div class="footer-tagline">Security, Engineered.</div>
           <div class="footer-location">Lusaka, Zambia</div>
           <div class="social-row" aria-label="Social links">
@@ -2283,44 +2264,44 @@
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const galleryItems = [
       {
-        src: "images/Bay Area Lions Gate _ Automatic Gate & Fence Installation & Repair in Palo Alto, CA.jfif",
-        alt: "Gate motor alignment and control box installation",
-        label: "Gate Motor Installation"
+        src: "images/site/cctv-dome-camera.jpg",
+        alt: "Dome surveillance camera installed inside a commercial property in Lusaka",
+        label: "Dome Camera Install"
       },
       {
-        src: "images/Best CCTV Installation Services in Nigeria.jfif",
-        alt: "Technician mounting an interior dome security camera",
-        label: "Interior CCTV Setup"
+        src: "images/PHOTO-2026-04-20-21-19-56 2.jpg",
+        alt: "NVR monitor displaying multiple live CCTV camera feeds at a commercial property in Lusaka",
+        label: "NVR Monitor Setup"
       },
       {
-        src: "images/CCTV Installations in Stoke on Trent _ Home CCTV Systems in Staffordshire.jfif",
-        alt: "Exterior bullet camera installation",
-        label: "Exterior Camera Mounting"
+        src: "images/PHOTO-2026-04-20-21-13-07 2.jpg",
+        alt: "Bullet camera mounted to a junction box during CCTV installation in Lusaka",
+        label: "Bullet Camera Mount"
+      },
+      {
+        src: "images/PHOTO-2026-04-17-16-14-07.jpg",
+        alt: "Hikvision keypad access reader installed beside a secure office door in Lusaka",
+        label: "Hikvision Keypad"
+      },
+      {
+        src: "images/PHOTO-2026-04-17-16-14-06 2.jpg",
+        alt: "ZKTeco magnetic lock access control installation on a wooden door in Lusaka",
+        label: "ZKTeco Mag-Lock"
+      },
+      {
+        src: "images/preview.webp",
+        alt: "No-touch exit button mounted beside a secure access door in Lusaka",
+        label: "No-Touch Exit"
       },
       {
         src: "images/download (1).jfif",
-        alt: "Structured rack and cable management installation",
-        label: "Rack & Cable Management"
+        alt: "Wall-mounted security rack with backup power and access control equipment during installation",
+        label: "Power & Rack Setup"
       },
       {
-        src: "images/download.jfif",
-        alt: "Technician configuring CCTV monitoring equipment",
-        label: "Monitoring Room Commissioning"
-      },
-      {
-        src: "images/Enhance Security with Automatic Gate Installation by SF Bay Automatic Gates in San Rafael.jfif",
-        alt: "Industrial sliding gate motor installation in progress",
-        label: "Perimeter Gate Automation"
-      },
-      {
-        src: "images/Garage Makeover Ideas & Projects \u2022 OhMeOhMy Blog.jfif",
-        alt: "Residential technician installing a wall-mounted camera",
-        label: "Residential Camera Install"
-      },
-      {
-        src: "images/Is Gate Automation A Good Investment For Your Home_.jfif",
-        alt: "Remote-controlled residential gate entrance",
-        label: "Home Gate Automation"
+        src: "images/site/access-control-power-box.jpg",
+        alt: "Wall-mounted access control power supply box installed at an office in Lusaka",
+        label: "Power Supply Box"
       }
     ];
 
@@ -2376,7 +2357,7 @@
     function setTheme(mode) {
       document.body.classList.toggle("light-mode", mode === "light");
       document.documentElement.style.colorScheme = mode;
-      document.querySelector('meta[name="theme-color"]').setAttribute("content", mode === "light" ? "#F7F8FB" : "#0D0F14");
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", mode === "light" ? "#F5F8FF" : "#0A173A");
       themeToggles.forEach(function(toggle) {
         toggle.setAttribute("aria-label", mode === "light" ? "Switch to dark mode" : "Switch to light mode");
       });
@@ -2529,10 +2510,12 @@
       if (prefersReducedMotion || window.matchMedia("(pointer: coarse)").matches) return;
       const hero = document.querySelector(".hero");
       if (!hero) return;
+      const heroMedia = hero.querySelector(".hero-background");
+      if (!heroMedia) return;
 
       function updateParallax() {
         const offset = Math.min(window.scrollY * 0.18, 120);
-        hero.style.backgroundPosition = "center calc(50% + " + offset + "px)";
+        heroMedia.style.transform = "translateY(" + offset + "px) scale(1.08)";
       }
 
       updateParallax();
@@ -2595,7 +2578,7 @@
     updateNavState();
 
     const storedTheme = localStorage.getItem("bytecraft-theme");
-    setTheme(storedTheme === "dark" ? "dark" : "light");
+    setTheme(storedTheme === "light" ? "light" : "dark");
 
     AOS.init({ duration: 700, once: true, offset: 60 });
   </script>
